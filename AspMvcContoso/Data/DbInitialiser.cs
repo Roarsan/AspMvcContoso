@@ -6,6 +6,7 @@ namespace AspMvcContoso.Data
     { 
         public static void Initialize(ApplicationDbContext context)
             {
+            context.Database.EnsureCreated();   
                 // Look for any students.
                 if (context.Students.Any())
                 {
